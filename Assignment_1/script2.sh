@@ -1,5 +1,5 @@
 
-total=`find $1 -type f|wc -l`			#counts total no of files recursively (not directories)
+total=$(find $1 -type f|wc -l)			#counts total no of files recursively (not directories)
 echo $total
 dirs=`find $1 -maxdepth 1 -mindepth 1 -type d` 		#subdirectories at level 1
 #echo $dirs
