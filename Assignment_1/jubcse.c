@@ -13,7 +13,7 @@
 
 char* manual_commands[]={"editfile","newdir","content","info","exitbcse"};
 
-void shellfunc(void);			//accepts commands and executes it
+void shellfunc(void);			//accepts commands and executes it and waits until exit
 int execute_func(char** args,int count);
 int custom_command(char** args,int (*func)(char**,int),int count);
 int system_command(char** args,int count);
