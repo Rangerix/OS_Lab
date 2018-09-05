@@ -179,7 +179,7 @@ int custom_command(char** args,int (*func)(char**,int),int count){
 
 
 int editfile(char** args,int count){
-	args[0]="gedit";
+	args[0]="vi";
 	return system_command(args,count);
 }
 
