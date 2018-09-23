@@ -183,7 +183,6 @@ int sh_launch(char** args)
 		close(STDERR_FILENO);
 	    int x = open("/dev/null", O_RDWR);   // Redirect input, output and stderr to /dev/null
 	    dup(x);
-		
 		if(execvp(args[0],args)==-1)//For invalid command
 		{
 			printf("jubcseIII: no such file or command\n");
@@ -230,6 +229,7 @@ int sh_launch_custom(char** args,int (*func)(char**))
 	if(pid==0 && background==1)
 	{
 		//execute command
+		printf("custom background\n");
 		if((*func)(args)==0)//For invalid command
 		{
 			printf("jubcseIII: error executing command\n");
